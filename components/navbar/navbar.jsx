@@ -3,8 +3,31 @@ import Link from 'next/link';
 import styles from './navbar.module.scss';
 import {BiChevronDown} from 'react-icons/bi';
 import Banner from '../banner/banner';
+import {useEffect, useState} from 'react';
+import Submenu from '../submenu/submenu';
 
 const Navbar = () => {
+  const [showSubmenu1, setShowSubmenu1] = useState(false);
+  const [showSubmenu2, setShowSubmenu2] = useState(false);
+  const [submenuInfo, setSubmenuInfo] = useState({});
+
+  const displaySubmenu = (e) => {
+    if (e.target.textContent === 'Usluge') {
+      setShowSubmenu1(true);
+      setShowSubmenu2(false);
+    }
+    if (e.target.textContent === 'O nama') {
+      setShowSubmenu1(false);
+      setShowSubmenu2(true);
+    }
+    const tempBtn = e.target.closest('li').getBoundingClientRect();
+    const center = (tempBtn.left + tempBtn.right) / 2;
+    const bottom = tempBtn.bottom - 9;
+    setSubmenuInfo({center, bottom});
+  };
+
+  useEffect(() => {});
+
   return (
     <div className={styles.navbar}>
       <Banner />
@@ -21,15 +44,25 @@ const Navbar = () => {
             <ul>
               <li>
                 <Link href="/usluge">
-                  <a>
+                  <a onMouseOver={displaySubmenu}>
                     Usluge
                     <BiChevronDown />
                   </a>
                 </Link>
+                <Submenu
+                  showSubmenu={showSubmenu1}
+                  submenuInfo={submenuInfo}
+                  submenuContent={[
+                    'Ginekologija',
+                    'Opstetricija',
+                    'Interna medicina',
+                    'Radiologija - mamografija',
+                  ]}
+                />
               </li>
               <li>
                 <Link href="/o-nama">
-                  <a>
+                  <a onMouseOver={displaySubmenu}>
                     <span>O</span>
                     <span> nama</span>
                     <span className={styles.icon}>
@@ -37,6 +70,15 @@ const Navbar = () => {
                     </span>
                   </a>
                 </Link>
+                <Submenu
+                  showSubmenu={showSubmenu2}
+                  submenuInfo={submenuInfo}
+                  submenuContent={[
+                    'Naš stručni tim',
+                    'Naša klinika',
+                    'Iskustva',
+                  ]}
+                />
               </li>
               <li>
                 <Link href="/zanimljivosti">

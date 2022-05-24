@@ -1,0 +1,44 @@
+.submenu {
+  z-index: 1000;
+  &.submenu-s {
+    width: 10rem;
+
+    background-color: rgba($color: #fff, $alpha: 0.5);
+
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: none;
+    border-radius: var(--radius);
+    transition: var(--transition);
+    &.show {
+      display: block;
+    }
+    .submenu-list {
+      padding: 1rem;
+      width: 10rem;
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+      li {
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+.submenu::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid var(--clr-white);
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}

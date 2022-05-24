@@ -1,11 +1,12 @@
-import BackgroundImage from '../../components/backgroundImage/backgroundImage';
+import Image from 'next/image';
 import styles from './hero.module.scss';
 
 const Hero = () => {
   return (
     <div className={styles.hero}>
-      Hero
-      <BackgroundImage url="/images/hero.jpg" />
+      <div className={styles.background}>
+        <Image src="/images/hero.jpg" width={6000} height={4000} />
+      </div>
     </div>
   );
 };

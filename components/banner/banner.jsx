@@ -10,13 +10,16 @@ const Banner = () => {
     <div className={styles.banner}>
       <div>
         <div>
-          <Link href={'https://goo.gl/maps/tRMv4ESTVpcxe43Y7'} passHref={true}>
+          <a
+            href={'https://goo.gl/maps/tRMv4ESTVpcxe43Y7'}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div className={styles.link}>
               <IoLocation />
-
-              <h6>Tratinska 36, 10000 Zagreb, Hrvatska</h6>
+              <h6>Tratinska 36, Zagreb, Hrvatska</h6>
             </div>
-          </Link>
+          </a>
         </div>
         <div className={styles.socials}>
           <ul>
@@ -24,7 +27,7 @@ const Banner = () => {
               <Link href="tel:+38513821411">
                 <div className={styles.link}>
                   <IoCall />
-                  <h6>+ 385 1 3821 411</h6>
+                  <h6>+ 385 (1) 3821 411</h6>
                 </div>
               </Link>
             </li>
@@ -43,11 +46,15 @@ const Banner = () => {
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <a
+                href="https://twitter.com/marinaivanisev3"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <div className={styles.link}>
                   <FaTwitter />
                 </div>
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
