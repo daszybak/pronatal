@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../components/layout/layout';
-import Hero from '../containers/hero';
+import Hero from '../containers/hero/hero';
 
 export default function Home() {
   return (

@@ -28,6 +28,7 @@
   --red-dark: #842029;
   --green-light: #d1e7dd;
   --green-dark: #0f5132;
+  --mahagony: #d4560d;
 
   /* fonts  */
   --headingFont: 'Noto Serif', sans-serif;
@@ -36,6 +37,7 @@
   --extra-small-text: 0.7em;
   /* rest of the vars */
   --backgroundColor: var(--grey-50);
+  --backgroundColorBanner: var(--mahagony);
   --textColor: var(--grey-900);
   --borderRadius: 0.25rem;
   --letterSpacing: 1px;

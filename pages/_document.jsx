@@ -5,10 +5,9 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>Pronatal</title>
           <link rel="icon" href="images/icons/favicon.ico" />
           <link rel="apple-touch-icon" href="images/icons/logo192.png" />
-          <link rel="manifest" href="/manifest.json" />
+          <link rel="manifest" href="images/icons/manifest.json" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
           <link
