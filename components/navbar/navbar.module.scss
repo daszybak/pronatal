@@ -15,13 +15,20 @@
   align-items: center;
   justify-content: center;
   padding: 0 2rem;
+  height: 100%;
 
   div {
+    height: 100%;
     width: 100%;
     max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .increase {
+      height: 100%;
+      height: 72px;
+    }
 
     img {
       width: 203px;
@@ -36,14 +43,20 @@
       gap: 3rem;
       align-items: center;
 
-      a {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
+      li {
+        height: 100%;
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          height: 100%;
+          height: 72px;
+        }
 
         svg {
           display: inline;
-          transform: translate(-10%, 10%);
+          transform: translate(-20%, 10%);
         }
       }
     }
@@ -51,5 +64,12 @@
 
   .icon {
     transform: translateY(5%);
+  }
+
+  .initial {
+    transition: all 250ms ease-in-out;
+    &.rotate {
+      transform: rotateZ(-90deg);
+    }
   }
 }
