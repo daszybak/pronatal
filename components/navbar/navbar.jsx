@@ -5,11 +5,19 @@ import {BiChevronDown} from 'react-icons/bi';
 import Banner from '../banner/banner';
 import {useEffect, useState} from 'react';
 import Submenu from '../submenu/submenu';
+import MobileNavbar from '../mobileNavbar/mobileNavbar';
+import MobileMenu from '../mobileMenu/mobileMenu';
 
 const Navbar = () => {
   const [showSubmenu1, setShowSubmenu1] = useState(false);
   const [showSubmenu2, setShowSubmenu2] = useState(false);
   const [submenuInfo, setSubmenuInfo] = useState({});
+
+  const [showMenu, setShowMenu] = useState(false);
+
+  const handleShowMenuOnClick = () => {
+    setShowMenu((showMenu) => !showMenu);
+  };
 
   const displaySubmenu = (e) => {
     console.log('showSubmenu');
@@ -39,17 +47,21 @@ const Navbar = () => {
     }
   };
 
-  useEffect(() => {});
-
   return (
     <div className={styles.navbar}>
       <Banner />
+      <MobileNavbar />
       <nav className={styles.nav}>
         <div>
           <div className={styles.increase}>
             <Link href="/" style={{height: '100%'}}>
               <a>
-                <Image src="/images/pronatal-.png" width="203" height="27" />
+                <Image
+                  src="/images/pronatal-.png"
+                  width="203"
+                  height="27"
+                  alt="ProNatal"
+                />
               </a>
             </Link>
           </div>
@@ -119,7 +131,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li key={'Naručite'}>
-                <Link href="/">
+                <Link href="/#footer">
                   <a className="btn" style={{height: 'auto'}}>
                     <span>Naručite</span>
                     <span> se</span>

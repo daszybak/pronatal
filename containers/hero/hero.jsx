@@ -5,7 +5,12 @@ const Hero = () => {
   return (
     <div className={styles.hero}>
       <div className={styles.background}>
-        <Image src="/images/hero.jpg" width={6000} height={4000} />
+        <Image
+          src="/images/hero.jpg"
+          width={6000}
+          height={4000}
+          alt="Mama s bebom"
+        />
       </div>
     </div>
   );

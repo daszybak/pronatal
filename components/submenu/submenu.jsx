@@ -26,22 +26,22 @@ const Submenu = ({showSubmenu, submenuInfo, submenuContent}) => {
     submenu.style.top = `${bottom}px`;
   }, [center, bottom]);
 
-  useEffect(() => {
-    console.log('container', container.current);
-    if (showSubmenu) {
-      const timeout = setTimeout(() => {
-        container.current.style.display = 'block';
-        return () => clearTimeout(timeout);
-      }, 10);
-    }
+  // useEffect(() => {
+  //   console.log('container', container.current);
+  //   if (showSubmenu) {
+  //     const timeout = setTimeout(() => {
+  //       container.current.style.display = 'block';
+  //       return () => clearTimeout(timeout);
+  //     }, 10);
+  //   }
 
-    if (!showSubmenu) {
-      const timeout = setTimeout(() => {
-        container.current.style.display = 'none';
-        return () => clearTimeout(timeout);
-      }, 250);
-    }
-  }, [showSubmenu]);
+  //   if (!showSubmenu) {
+  //     const timeout = setTimeout(() => {
+  //       container.current.style.display = 'none';
+  //       return () => clearTimeout(timeout);
+  //     }, 250);
+  //   }
+  // }, [showSubmenu]);
 
   return (
     <div

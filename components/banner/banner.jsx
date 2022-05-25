@@ -4,8 +4,11 @@ import Link from 'next/link';
 
 import {IoLocation, IoCall} from 'react-icons/io5';
 import {FaFacebookF, FaInstagram, FaTwitter} from 'react-icons/fa';
+import useResize from '../../hooks/useResize';
 
 const Banner = () => {
+  const {width} = useResize();
+
   return (
     <div className={styles.banner}>
       <div>
@@ -31,31 +34,35 @@ const Banner = () => {
                 </div>
               </Link>
             </li>
-            <li>
-              <Link href="/">
-                <div className={styles.link}>
-                  <FaFacebookF />
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <div className={styles.link}>
-                  <FaInstagram />
-                </div>
-              </Link>
-            </li>
-            <li>
-              <a
-                href="https://twitter.com/marinaivanisev3"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className={styles.link}>
-                  <FaTwitter />
-                </div>
-              </a>
-            </li>
+            {width > 1350 && (
+              <>
+                <li>
+                  <Link href="/">
+                    <div className={styles.link}>
+                      <FaFacebookF />
+                    </div>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/">
+                    <div className={styles.link}>
+                      <FaInstagram />
+                    </div>
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com/marinaivanisev3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className={styles.link}>
+                      <FaTwitter />
+                    </div>
+                  </a>
+                </li>
+              </>
+            )}
           </ul>
         </div>
       </div>

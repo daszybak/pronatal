@@ -7,69 +7,103 @@
 }
 
 .nav {
-  display: flex;
-  background-color: rgba($color: #fff, $alpha: 0.75);
-  position: relative;
-  width: 100%;
-  height: 72px;
-  align-items: center;
-  justify-content: center;
-  padding: 0 2rem;
-  height: 100%;
+  display: none;
 
-  div {
-    height: 100%;
-    width: 100%;
-    max-width: 1200px;
+  @media screen and (min-width: 1350px) {
     display: flex;
-    justify-content: space-between;
+    background-color: rgba($color: #fff, $alpha: 0.75);
+    position: relative;
+    width: 100%;
+    height: 72px;
     align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    height: 100%;
 
-    .increase {
+    div {
       height: 100%;
-      height: 72px;
-    }
-
-    img {
-      width: 203px;
-      height: 27px;
-    }
-
-    ul {
-      list-style: none;
+      width: 100%;
+      max-width: 1200px;
       display: flex;
-      flex-direction: row;
       justify-content: space-between;
-      gap: 3rem;
       align-items: center;
 
-      li {
+      .increase {
         height: 100%;
+        height: 72px;
+      }
 
-        a {
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
+      img {
+        width: 203px;
+        height: 27px;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 3rem;
+        align-items: center;
+        width: 750px;
+        li {
           height: 100%;
-          height: 72px;
-        }
+          width: 6rem;
+          display: flex;
+          justify-content: center;
+          transition: all 250ms ease-in-out;
+          a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            height: 100%;
+            height: 72px;
+            color: inherit;
+          }
 
-        svg {
-          display: inline;
-          transform: translate(-20%, 10%);
+          div {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            height: 100%;
+            height: 72px;
+            color: inherit;
+          }
+
+          &:hover {
+            color: var(--grey-400);
+          }
+
+          svg {
+            display: inline;
+            transform: translate(-20%, 10%);
+          }
         }
       }
     }
-  }
 
-  .icon {
-    transform: translateY(5%);
-  }
+    .icon {
+      transform: translateY(5%);
+    }
 
-  .initial {
-    transition: all 250ms ease-in-out;
-    &.rotate {
-      transform: rotateZ(-90deg);
+    .initial {
+      color: var(--textColor);
+      transform: none;
+
+      @keyframes icon {
+        0% {
+          color: var(--grey-400);
+        }
+
+        100% {
+          transform: rotateZ(-90deg);
+          color: var(--grey-400);
+        }
+      }
+
+      &.rotate {
+        animation: icon 250ms ease-in-out forwards;
+      }
     }
   }
 }

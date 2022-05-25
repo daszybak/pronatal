@@ -1,0 +1,18 @@
+.outer {
+  overflow: hidden;
+  .menu {
+    background-color: rgba($color: #fff, $alpha: 0.75);
+    position: fixed;
+
+    transition: all 250ms ease-out;
+
+    &.show {
+      height: 100%;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
