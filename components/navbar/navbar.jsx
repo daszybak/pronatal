@@ -13,12 +13,6 @@ const Navbar = () => {
   const [showSubmenu2, setShowSubmenu2] = useState(false);
   const [submenuInfo, setSubmenuInfo] = useState({});
 
-  const [showMenu, setShowMenu] = useState(false);
-
-  const handleShowMenuOnClick = () => {
-    setShowMenu((showMenu) => !showMenu);
-  };
-
   const displaySubmenu = (e) => {
     console.log('showSubmenu');
     if (e.currentTarget.textContent === 'Usluge') {
