@@ -25,7 +25,10 @@ const MobileNavbar = () => {
   }, [showMenu]);
 
   return (
-    <div className={styles.navbar} ref={navbarContainer}>
+    <div
+      className={`${styles.navbar} ${showMenu ? styles.show : ''}`}
+      ref={navbarContainer}
+    >
       <div className={styles['image-container']}>
         <Link href="/">
           <a>

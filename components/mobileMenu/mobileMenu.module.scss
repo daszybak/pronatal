@@ -10,6 +10,7 @@
 
   &.show {
     visibility: visible;
+    background-color: rgba($color: #fff, $alpha: 1);
   }
 
   ul {
@@ -23,5 +24,11 @@
 
     //   }
     // }
+
+    li {
+      a {
+        color: var(--textColor);
+      }
+    }
   }
 }

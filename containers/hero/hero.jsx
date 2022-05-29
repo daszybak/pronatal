@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import styles from './hero.module.scss';
+import Image from 'next/image';
 
 const Hero = () => {
   return (
@@ -7,9 +7,9 @@ const Hero = () => {
       <div className={styles.background}>
         <Image
           src="/images/hero.jpg"
-          width={6000}
-          height={4000}
           alt="Mama s bebom"
+          layout="fill"
+          objectFit="cover"
         />
       </div>
     </div>

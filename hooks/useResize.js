@@ -1,4 +1,4 @@
-import {useLayoutEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 
 const getWindowSize = () => {
   const {width, height} = window.screen;
@@ -10,7 +10,7 @@ const useResize = () => {
   const [width, setWidth] = useState();
   const [height, setHeight] = useState();
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const {width, height} = getWindowSize();
     setHeight(height);
     setWidth(width);

@@ -1,13 +1,18 @@
 .navbar {
   height: 64px;
   width: 100%;
-  background-color: rgba($color: #fff, $alpha: 0.75);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: rgba($color: #fff, $alpha: 0.75);
   padding-left: 2rem;
   z-index: 1000;
+  transition: all 500ms ease-out;
+
+  &.show {
+    background-color: rgba($color: #fff, $alpha: 1);
+  }
 
   @media screen and (min-width: 650px) {
     padding: 0;
