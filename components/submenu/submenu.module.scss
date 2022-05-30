@@ -11,6 +11,9 @@
 
     &.show {
       display: block;
+      .submenu-list {
+        background-color: rgba($color: #fff, $alpha: 1);
+      }
     }
     .submenu-list {
       background-color: rgba($color: #fff, $alpha: 0.75);

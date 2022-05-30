@@ -126,7 +126,10 @@ const Navbar = () => {
               </li>
               <li key={'Naručite'}>
                 <Link href="/#footer">
-                  <a className="btn" style={{height: 'auto'}}>
+                  <a
+                    className="btn"
+                    style={{height: 'auto', color: 'var(--white)'}}
+                  >
                     <span>Naručite</span>
                     <span> se</span>
                   </a>

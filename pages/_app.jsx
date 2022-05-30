@@ -19,7 +19,7 @@ function MyApp({Component, pageProps}) {
         />
       </Head>
       <MobileMenuContextProvider>
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </MobileMenuContextProvider>
     </>
   );

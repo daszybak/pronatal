@@ -6,7 +6,7 @@ import {useContext, useRef, useEffect, useState} from 'react';
 import MobileSubmenu from '../mobileSubmenu/mobileSubmenu';
 
 const MobileMenu = ({location}) => {
-  const {showMenu} = useContext(MobileMenuContext);
+  const {showMenu, handleShowMenuOnClick} = useContext(MobileMenuContext);
   const mobileMenuContainer = useRef();
   const [showSubmenu1, setShowSubmenu1] = useState(false);
   const [showSubmenu2, setShowSubmenu2] = useState(false);
@@ -34,12 +34,14 @@ const MobileMenu = ({location}) => {
     if (showMenu) {
       mobileMenuContainer.current.style.left = `${location.left}px`;
       mobileMenuContainer.current.style.transform = `translateY(0%)`;
+      mobileMenuContainer.current.style.visibility = 'visible';
       return;
     }
 
     mobileMenuContainer.current.style.left = `0px`;
     mobileMenuContainer.current.style.top = `${location.bottom}px`;
     mobileMenuContainer.current.style.transform = `translateY(-100%)`;
+    mobileMenuContainer.current.style.visibility = 'hidden';
   }, [showMenu, location?.bottom]);
 
   useEffect(() => {
@@ -148,9 +150,12 @@ const MobileMenu = ({location}) => {
         </li>
         <li key={'Naručite'} style={{textAlign: 'center'}}>
           <Link href="/#footer">
-            <a className="btn" style={{height: 'auto'}}>
-              <span>Naručite</span>
-              <span> se</span>
+            <a
+              className={styles['menu-btn']}
+              style={{height: 'auto'}}
+              onClick={handleShowMenuOnClick}
+            >
+              Naručite se
             </a>
           </Link>
         </li>
