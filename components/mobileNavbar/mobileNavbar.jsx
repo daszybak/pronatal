@@ -24,6 +24,15 @@ const MobileNavbar = () => {
     };
   }, [showMenu]);
 
+  useEffect(() => {
+    if (!showMenu) {
+      document.body.style.overflow = 'auto';
+    }
+    if (showMenu) {
+      document.body.style.overflow = 'hidden';
+    }
+  }, [showMenu]);
+
   return (
     <div
       className={`${styles.navbar} ${showMenu ? styles.show : ''}`}

@@ -1,0 +1,10 @@
+.submenu {
+  width: 100%;
+  z-index: 500;
+  overflow: hidden;
+  scrollbar-width: none;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
