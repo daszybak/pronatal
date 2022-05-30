@@ -5,7 +5,7 @@ import CopyrightCard from '../../components/copyrightCard/copyrightCard';
 const Footbar = () => {
   return (
     <footer className={styles.footer}>
-      <a id="footer" className={styles.anchor}></a>
+      <div id="footer" className={styles.anchor}></div>
       <Form />
       <CopyrightCard />
     </footer>

@@ -10,8 +10,8 @@ const Hero = () => {
           alt="Mama s bebom"
           layout="fill"
           objectFit="cover"
-          quality={100}
-          priority={true}
+          quality={75}
+          loading="lazy"
         />
       </div>
     </div>
