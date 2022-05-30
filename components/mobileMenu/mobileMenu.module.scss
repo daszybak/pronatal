@@ -3,14 +3,19 @@
   position: fixed;
   visibility: hidden;
   transition: all 500ms ease-out;
-
+  height: calc(100% - 144px);
   width: 100%;
   z-index: 500;
-  height: 100%;
+  margin-bottom: 0;
 
   &.show {
     visibility: visible;
     background-color: rgba($color: #fff, $alpha: 1);
+
+    ul {
+      background-color: rgba($color: #fff, $alpha: 1);
+      margin-bottom: 0;
+    }
   }
 
   ul {
