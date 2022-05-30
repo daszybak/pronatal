@@ -24,7 +24,7 @@ const Navbar = () => {
       setShowSubmenu2(true);
     }
     const tempBtn = e.target.closest('li').getBoundingClientRect();
-    const center = (tempBtn.left + tempBtn.right) / 2;
+    const center = tempBtn.right;
     const bottom = tempBtn.bottom - 30;
     console.log('tempBtn', tempBtn, 'center', center, 'bottom', bottom);
     setSubmenuInfo({center, bottom});
