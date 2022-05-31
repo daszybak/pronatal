@@ -32,13 +32,17 @@
   border-radius: var(--borderRadius);
   letter-spacing: var(--letterSpacing);
   padding: 0.375rem 0.75rem;
-  box-shadow: var(--shadow-1);
+
   transition: all 200ms ease-out;
   text-transform: capitalize;
   align-items: center;
 
   @media screen and (max-width: 1350px) {
     display: flex;
+  }
+
+  svg {
+    font-size: 28px;
   }
 }
 

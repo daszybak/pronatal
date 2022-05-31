@@ -1,7 +1,7 @@
 import styles from './hero.module.scss';
 import Image from 'next/image';
 
-const Hero = () => {
+const Hero = ({children}) => {
   return (
     <div className={styles.hero}>
       <div className={styles.background}>
@@ -14,6 +14,7 @@ const Hero = () => {
           loading="lazy"
         />
       </div>
+      {children}
     </div>
   );
 };

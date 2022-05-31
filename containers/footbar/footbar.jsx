@@ -24,7 +24,6 @@ const Footbar = () => {
             <Link href="/#footer">
               <a className={styles['menu-btn']} style={{height: 'auto'}}>
                 <IoMailOutline />
-                &nbsp;Naručite se
               </a>
             </Link>
           )

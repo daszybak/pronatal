@@ -20,6 +20,8 @@
 
       a {
         visibility: visible;
+        text-transform: uppercase;
+        letter-spacing: 1px;
       }
 
       .menu-btn {
@@ -47,6 +49,8 @@
         align-self: center;
         a {
           color: var(--textColor);
+          text-transform: uppercase;
+          letter-spacing: 1px;
         }
       }
       .menu-btn {

@@ -4,6 +4,7 @@ import styles from './mobileNavbar.module.scss';
 import {useContext, useRef, useEffect, useState} from 'react';
 import MobileMenuContext from '../../context/mobileMenuContext';
 import MobileMenu from '../mobileMenu/mobileMenu';
+import {AiOutlinePhone} from 'react-icons/ai';
 
 const MobileNavbar = () => {
   const {showMenu, handleShowMenuOnClick} = useContext(MobileMenuContext);
@@ -50,13 +51,20 @@ const MobileNavbar = () => {
           </a>
         </Link>
       </div>
-      <div
-        className={`${styles['burger-menu']} ${showMenu ? styles.checked : ''}`}
-        onClick={handleShowMenuOnClick}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
+      <div className={styles.icons}>
+        <a href="tel:+38513821411">
+          <AiOutlinePhone className={styles.phone} />
+        </a>
+        <div
+          className={`${styles['burger-menu']} ${
+            showMenu ? styles.checked : ''
+          }`}
+          onClick={handleShowMenuOnClick}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
       <MobileMenu location={location} />
     </div>
