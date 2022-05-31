@@ -1,7 +1,6 @@
 .banner {
   height: 30px;
   display: none;
-
   align-items: center;
   justify-content: center;
   padding: 0;
@@ -73,7 +72,7 @@
     }
   }
 
-  @media screen and (min-width: 650px) {
+  @media screen and (min-width: 470px) {
     display: flex;
   }
 

@@ -20,7 +20,7 @@ const Banner = () => {
           >
             <div className={styles.link}>
               <IoLocation />
-              <h6>Tratinska 36, Zagreb, Hrvatska</h6>
+              <h6>Tratinska 36{width > 650 ? ', Zagreb, Hrvatska' : ''}</h6>
             </div>
           </a>
         </div>
