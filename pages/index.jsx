@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Layout from '../components/layout/layout';
 import Content from '../containers/content/content';
 import Hero from '../containers/hero/hero';
+import Footbar from '../containers/footbar/footbar';
 
 export default function Home() {
   return (
@@ -16,7 +17,8 @@ export default function Home() {
       <Layout>
         <Hero>
           <Content />
-        </Hero>
+        </Hero>{' '}
+        <Footbar />
       </Layout>
     </>
   );

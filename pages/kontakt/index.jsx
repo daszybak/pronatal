@@ -1,10 +1,10 @@
-import Layout from '../../components/layout/layout';
+import SecondaryLayout from '../../components/layout/secondaryLayout';
 import Contact from '../../containers/contact/contact';
 
 export default function Kontakt() {
   return (
-    <Layout>
+    <SecondaryLayout>
       <Contact />
-    </Layout>
+    </SecondaryLayout>
   );
 }
