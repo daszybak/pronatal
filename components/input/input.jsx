@@ -48,10 +48,11 @@ const Input = ({name, text}) => {
             label={text}
             {...field}
             variant="outlined"
-            error={meta.touched && meta.error}
+            error={Boolean(meta.touched && meta.error)}
             helperText={meta.touched && meta.error}
             multiline={name === 'message'}
             rows={name === 'message' ? 4 : 1}
+            className={styles.input}
           />
         )}
       </Field>

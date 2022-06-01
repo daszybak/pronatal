@@ -14,7 +14,6 @@ const Navbar = () => {
   const [submenuInfo, setSubmenuInfo] = useState({});
 
   const displaySubmenu = (e) => {
-    console.log('showSubmenu');
     if (e.currentTarget.textContent === 'Usluge') {
       setShowSubmenu1(true);
       setShowSubmenu2(false);
@@ -26,13 +25,11 @@ const Navbar = () => {
     const tempBtn = e.target.closest('li').getBoundingClientRect();
     const center = tempBtn.right;
     const bottom = tempBtn.bottom - 30;
-    console.log('tempBtn', tempBtn, 'center', center, 'bottom', bottom);
+
     setSubmenuInfo({center, bottom});
   };
 
   const hideSubmenu = (e) => {
-    console.log('hideSubmenu');
-    console.log('e.target.id', e.currentTarget.id);
     if (e.currentTarget.id === 'submenu1') {
       setShowSubmenu1(false);
     }

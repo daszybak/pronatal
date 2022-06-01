@@ -2,15 +2,11 @@ import styles from './footbar.module.scss';
 import Form from '../form/form';
 import CopyrightCard from '../../components/copyrightCard/copyrightCard';
 import {useRef, useState, useEffect} from 'react';
-import useIntersection from '../../hooks/useIntersection';
-import Link from 'next/link';
-import {IoMailOutline} from 'react-icons/io5';
+import ContactButton from '../../components/contactButton/contactButton';
 
 const Footbar = () => {
-  const footbarContainer = useRef();
   const [showButton, setShowButton] = useState(false);
-  const isFootbarContainerVisible = useIntersection(footbarContainer);
-
+  const footbarContainer = useRef();
   useEffect(() => {
     setShowButton(true);
   }, []);
@@ -19,15 +15,7 @@ const Footbar = () => {
     <footer className={styles.footer} ref={footbarContainer}>
       <div id="footer" className={styles.anchor}></div>
       <Form />
-      {showButton
-        ? !isFootbarContainerVisible && (
-            <Link href="/#footer">
-              <a className={styles['menu-btn']} style={{height: 'auto'}}>
-                <IoMailOutline />
-              </a>
-            </Link>
-          )
-        : null}
+      {showButton && <ContactButton footbarContainer={footbarContainer} />}
       <CopyrightCard />
     </footer>
   );

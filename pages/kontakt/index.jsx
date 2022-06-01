@@ -3,8 +3,10 @@ import Contact from '../../containers/contact/contact';
 
 export default function Kontakt() {
   return (
-    <SecondaryLayout>
-      <Contact />
-    </SecondaryLayout>
+    <>
+      <SecondaryLayout>
+        <Contact />
+      </SecondaryLayout>
+    </>
   );
 }

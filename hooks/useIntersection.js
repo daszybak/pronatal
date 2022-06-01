@@ -2,6 +2,7 @@ import {useState, useLayoutEffect} from 'react';
 
 const useIntersection = (element, rootMargin = '0px') => {
   const [isVisible, setIsVisible] = useState(false);
+  const {current} = element;
 
   useLayoutEffect(() => {
     const observer = new IntersectionObserver(
@@ -11,10 +12,10 @@ const useIntersection = (element, rootMargin = '0px') => {
       {rootMargin}
     );
 
-    element.current && observer.observe(element.current);
+    current && observer.observe(current);
 
-    return () => observer.unobserve(element.current);
-  }, []);
+    // return () => observer.unobserve(current);
+  }, [current]);
 
   return isVisible;
 };

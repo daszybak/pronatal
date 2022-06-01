@@ -1,3 +1,15 @@
 .input {
-  color: var(--baby-blue);
+  width: 400px;
+
+  @media screen and (max-width: 600px) {
+    width: 300px;
+  }
+
+  @media screen and (max-width: 450px) {
+    width: 225px;
+  }
+
+  @media screen and (max-width: 350px) {
+    width: 125px;
+  }
 }
