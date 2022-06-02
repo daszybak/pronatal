@@ -7,11 +7,14 @@ import {useEffect, useState} from 'react';
 import Submenu from '../submenu/submenu';
 import MobileNavbar from '../mobileNavbar/mobileNavbar';
 import MobileMenu from '../mobileMenu/mobileMenu';
+import {useRouter} from 'next/router';
 
 const Navbar = () => {
   const [showSubmenu1, setShowSubmenu1] = useState(false);
   const [showSubmenu2, setShowSubmenu2] = useState(false);
   const [submenuInfo, setSubmenuInfo] = useState({});
+  const router = useRouter();
+  const {pathname} = router;
 
   const displaySubmenu = (e) => {
     if (e.currentTarget.textContent === 'Usluge') {
@@ -122,7 +125,9 @@ const Navbar = () => {
                 </Link>
               </li>
               <li key={'Naručite'}>
-                <Link href="/#footer">
+                <Link
+                  href={pathname === '/kontakt' ? '/kontakt#form' : '/#footer'}
+                >
                   <a
                     className="btn"
                     style={{height: 'auto', color: 'var(--white)'}}

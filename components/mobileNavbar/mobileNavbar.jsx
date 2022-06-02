@@ -7,7 +7,8 @@ import MobileMenu from '../mobileMenu/mobileMenu';
 import {AiOutlinePhone} from 'react-icons/ai';
 
 const MobileNavbar = () => {
-  const {showMenu, handleShowMenuOnClick} = useContext(MobileMenuContext);
+  const {showMenu, handleShowMenuOnClick, closeMenu} =
+    useContext(MobileMenuContext);
   const navbarContainer = useRef();
   const [location, setLocation] = useState();
 
@@ -41,7 +42,7 @@ const MobileNavbar = () => {
     >
       <div className={styles['image-container']}>
         <Link href="/">
-          <a>
+          <a onClick={closeMenu}>
             <Image
               src="/images/pronatal-.png"
               width="203"

@@ -1,21 +1,31 @@
 import Form from '../form/form';
 import styles from './contact.module.scss';
-import {Wrapper, Status} from '@googlemaps/react-wrapper';
+// import {Wrapper, Status} from '@googlemaps/react-wrapper';
 import Map from '../../components/map/map';
+import Info from '../../components/info/info';
 
 const Contact = () => {
   return (
     <div className={styles.kontakt}>
       <div className={styles.content}>
-        <Wrapper apiKey={process.env.NEXT_PUBLIC_MAPS_API}>
+        {/* <Wrapper apiKey={process.env.NEXT_PUBLIC_MAPS_API}>
           <Map
             position={{
-              lat: process.env.NEXT_PUBLIC_MAPS_LAT,
-              lng: process.env.NEXT_PUBLIC_MAPS_LNG,
+              lat: Number(process.env.NEXT_PUBLIC_MAPS_LAT),
+              lng: Number(process.env.NEXT_PUBLIC_MAPS_LNG),
             }}
           />
-        </Wrapper>
-        <Form />
+        </Wrapper> */}
+        <div className={styles.info}>
+          <Info />
+        </div>
+        <div className={styles.form}>
+          <div id="form" className={styles.anchor}></div>
+          <Form />
+        </div>
+        <div className={styles.map}>
+          <Map />
+        </div>
       </div>
     </div>
   );

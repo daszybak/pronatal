@@ -11,6 +11,11 @@ const menuReducer = (state, action) => {
       showMenu: !state.showMenu,
     };
   }
+  if (action.type === 'close') {
+    return {
+      showMenu: false,
+    };
+  }
 };
 
 const MobileMenuContextProvider = ({children}) => {
@@ -20,8 +25,13 @@ const MobileMenuContextProvider = ({children}) => {
     dispatchMenu({type: 'toggle'});
   };
 
+  const closeMenu = () => {
+    dispatchMenu({type: 'close'});
+  };
+
   const initialValue = {
     showMenu: menu.showMenu,
+    closeMenu,
     handleShowMenuOnClick,
   };
 

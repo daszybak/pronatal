@@ -4,13 +4,16 @@ import MobileMenuContext from '../../context/mobileMenuContext';
 import {BiChevronDown} from 'react-icons/bi';
 import {useContext, useRef, useEffect, useState} from 'react';
 import MobileSubmenu from '../mobileSubmenu/mobileSubmenu';
+import {useRouter} from 'next/dist/client/router';
 
 const MobileMenu = ({location}) => {
-  const {showMenu, handleShowMenuOnClick} = useContext(MobileMenuContext);
+  const {showMenu, handleShowMenuOnClick, closeMenu} =
+    useContext(MobileMenuContext);
   const mobileMenuContainer = useRef();
   const [showSubmenu1, setShowSubmenu1] = useState(false);
   const [showSubmenu2, setShowSubmenu2] = useState(false);
   const [submenuInfo, setSubmenuInfo] = useState({});
+  const {pathname} = useRouter();
 
   const displaySubmenu = (e) => {
     console.log('showSubmenu');
@@ -67,6 +70,7 @@ const MobileMenu = ({location}) => {
                       showSubmenu1 ? 'var(--grey-400)' : 'var(--textColor)'
                     }`,
                   }}
+                  onClick={closeMenu}
                 >
                   Usluge
                 </a>
@@ -98,6 +102,7 @@ const MobileMenu = ({location}) => {
             <div>
               <Link href="/o-nama">
                 <a
+                  onClick={closeMenu}
                   style={{
                     color: `${
                       showSubmenu2 ? 'var(--grey-400)' : 'var(--textColor)'
@@ -128,6 +133,7 @@ const MobileMenu = ({location}) => {
         <li key={'zanimljivosti'}>
           <Link href="/zanimljivosti">
             <a
+              onClick={closeMenu}
               style={{
                 color: 'var(--textColor)',
               }}
@@ -140,6 +146,7 @@ const MobileMenu = ({location}) => {
         <li key={'kontakt'}>
           <Link href="/kontakt">
             <a
+              onClick={closeMenu}
               style={{
                 color: 'var(--textColor)',
               }}
@@ -149,11 +156,11 @@ const MobileMenu = ({location}) => {
           </Link>
         </li>
         <li key={'Naručite'} style={{textAlign: 'center'}}>
-          <Link href="/#footer">
+          <Link href={pathname === '/kontakt' ? '/kontakt#form' : '/#footer'}>
             <a
+              onClick={closeMenu}
               className={styles['menu-btn']}
               style={{height: 'auto'}}
-              onClick={handleShowMenuOnClick}
             >
               Naručite se
             </a>
