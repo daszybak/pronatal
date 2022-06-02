@@ -2,7 +2,12 @@ import {useEffect, useRef} from 'react';
 import Link from 'next/link';
 import styles from './mobileSubmenu.module.scss';
 
-const MobileSubmenu = ({showSubmenu, submenuInfo, submenuContent}) => {
+const MobileSubmenu = ({
+  showSubmenu,
+  submenuInfo,
+  submenuContent,
+  submenuRoute,
+}) => {
   const submenuContainer = useRef(null);
 
   useEffect(() => {
@@ -21,7 +26,7 @@ const MobileSubmenu = ({showSubmenu, submenuInfo, submenuContent}) => {
     return (
       <li key={index.toString()}>
         <Link
-          href={`/${name
+          href={`/${submenuRoute}#${name
             .split(' ')
             .map((name) => name.slice(0, 1).toLowerCase() + name.slice(1))
             .join('-')}`}

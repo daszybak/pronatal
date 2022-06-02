@@ -2,7 +2,7 @@ import Link from 'next/link';
 import {useEffect, useRef} from 'react';
 import styles from './submenu.module.scss';
 
-const Submenu = ({showSubmenu, submenuInfo, submenuContent}) => {
+const Submenu = ({showSubmenu, submenuInfo, submenuContent, submenuRoute}) => {
   const {center, bottom} = submenuInfo;
   const container = useRef(null);
 
@@ -10,7 +10,7 @@ const Submenu = ({showSubmenu, submenuInfo, submenuContent}) => {
     return (
       <li key={index.toString()}>
         <Link
-          href={`/${name
+          href={`/${submenuRoute}#${name
             .split(' ')
             .map((name) => name.slice(0, 1).toLowerCase() + name.slice(1))
             .join('-')}`}

@@ -83,6 +83,7 @@ const Navbar = () => {
                     'Interna medicina',
                     'Mamografija',
                   ]}
+                  submenuRoute={'/usluge'}
                 />
               </li>
               <li onMouseLeave={hideSubmenu} id={'submenu2'} key={'o nama'}>
@@ -109,10 +110,11 @@ const Navbar = () => {
                     'Naša klinika',
                     'Iskustva',
                   ]}
+                  submenuRoute={'/o-nama'}
                 />
               </li>
               <li key={'zanimljivosti'}>
-                <Link href="/zanimljivosti">
+                <Link href="/cesta-pitanja">
                   <a>
                     <span>Česta</span>
                     <span> pitanja</span>{' '}

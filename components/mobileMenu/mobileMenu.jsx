@@ -95,6 +95,7 @@ const MobileMenu = ({location}) => {
               'Interna medicina',
               'Mamografija',
             ]}
+            submenuRoute={'/usluge'}
           />
         </li>
         <li onClick={displaySubmenu} id={'submenu2'} key={'o nama'}>
@@ -128,10 +129,11 @@ const MobileMenu = ({location}) => {
             showSubmenu={showSubmenu2}
             submenuInfo={submenuInfo}
             submenuContent={['Naš stručni tim', 'Naša klinika', 'Iskustva']}
+            submenuRoute={'/o-nama'}
           />
         </li>
         <li key={'zanimljivosti'}>
-          <Link href="/zanimljivosti">
+          <Link href="/cesta-pitanja">
             <a
               onClick={closeMenu}
               style={{
