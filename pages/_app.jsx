@@ -3,10 +3,10 @@ import Head from 'next/head';
 import 'normalize.css';
 import MobileMenuContextProvider from '../context/mobileMenuContextProvider';
 import 'swiper/css';
-import '../styles/index.scss';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import '../styles/index.scss';
 
 function MyApp({Component, pageProps}) {
   return (

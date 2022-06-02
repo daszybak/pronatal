@@ -247,9 +247,18 @@ ul {
 }
 
 .title-underline {
-  background: var(--primary-500);
+  background: var(--primary-900);
   width: 7rem;
   height: 0.25rem;
   margin: 0 auto;
   margin-top: -1rem;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--primary-900);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--primary-900);
 }

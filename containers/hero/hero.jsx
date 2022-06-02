@@ -4,8 +4,6 @@ import Carousel from '../caorousel/carousel';
 import images from '../../data/carouselData.json';
 
 const Hero = ({children}) => {
-  console.log('images', images);
-
   return (
     <div className={styles.hero}>
       <div className={styles.background}>

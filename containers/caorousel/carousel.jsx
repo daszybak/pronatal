@@ -1,24 +1,21 @@
 import {Swiper, SwiperSlide} from 'swiper/react';
 import Image from 'next/image';
-import SwiperCore, {Navigation, Pagination, Scrollbar, A11y} from 'swiper';
+import {Autoplay, Navigation, Pagination} from 'swiper';
 
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 
 const Carousel = ({images}) => {
-  console.log(images);
-
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const carouselSlides = images.map(({alt, src}) => {
+  const carouselSlides = images.map(({alt, src, priority}) => {
     return (
-      <SwiperSlide>
+      <SwiperSlide key={alt}>
         <Image
           src={'/images/' + src}
           alt={alt}
           layout="fill"
           objectFit="cover"
           quality={75}
-          loading="lazy"
+          loading={priority ? 'eager' : 'lazy'}
+          priority={priority}
         />
       </SwiperSlide>
     );
@@ -27,20 +24,17 @@ const Carousel = ({images}) => {
   return (
     <div style={{height: '100%'}}>
       <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={50}
         slidesPerView={1}
         navigation
         pagination={{clickable: true}}
-        scrollbar={{draggable: true}}
-        autoplay={{delay: 300}}
         loop
         freeMode
         loopedSlides={3}
         mousewheel={{releaseOnEdges: true}}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
         style={{height: '100%'}}
+        autoplay={{delay: 5000}}
       >
         {carouselSlides}
       </Swiper>

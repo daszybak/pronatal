@@ -1,22 +1,27 @@
 [
   {
     "alt": "Prof. dr. sc. Josip Đelmiš",
-    "src": "pronatal-responsive-slike/profesor.jpg"
+    "src": "pronatal-responsive-slike/profesor.jpg",
+    "priority": true
   },
   {
     "alt": "Prof. dr. sc. Marina Ivanišević",
-    "src": "pronatal-responsive-slike/profesor.jpg"
+    "src": "pronatal-responsive-slike/profesorica.jpg",
+    "priority": true
   },
   {
     "alt": "Ultrazvuk",
-    "src": "pronatal-responsive-slike/ultrazvuk.jpg"
+    "src": "pronatal-responsive-slike/ultrazvuk.jpg",
+    "priority": true
   },
   {
     "alt": "Stol za pregled",
-    "src": "pronatal-responsive-slike/pregled.jpg"
+    "src": "pronatal-responsive-slike/pregled.jpg",
+    "priority": true
   },
   {
     "alt": "Mama s bebom",
-    "src": "hero.jpg"
+    "src": "hero.jpg",
+    "priority": true
   }
 ]
