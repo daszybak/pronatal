@@ -10,7 +10,7 @@ const Submenu = ({showSubmenu, submenuInfo, submenuContent, submenuRoute}) => {
     return (
       <li key={index.toString()}>
         <Link
-          href={`/${submenuRoute}#${name
+          href={`${submenuRoute}#${name
             .split(' ')
             .map((name) => name.slice(0, 1).toLowerCase() + name.slice(1))
             .join('-')}`}

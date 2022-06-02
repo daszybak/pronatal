@@ -2,7 +2,11 @@ import Head from 'next/head';
 
 import 'normalize.css';
 import MobileMenuContextProvider from '../context/mobileMenuContextProvider';
-import '../styles/index.css';
+import 'swiper/css';
+import '../styles/index.scss';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 function MyApp({Component, pageProps}) {
   return (

@@ -1,18 +1,15 @@
 import styles from './hero.module.scss';
 import Image from 'next/image';
+import Carousel from '../caorousel/carousel';
+import images from '../../data/carouselData.json';
 
 const Hero = ({children}) => {
+  console.log('images', images);
+
   return (
     <div className={styles.hero}>
       <div className={styles.background}>
-        <Image
-          src="/images/hero.jpg"
-          alt="Mama s bebom"
-          layout="fill"
-          objectFit="cover"
-          quality={75}
-          loading="lazy"
-        />
+        <Carousel images={images} />
       </div>
       {children}
     </div>
