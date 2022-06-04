@@ -4,6 +4,9 @@ const Info = () => {
   return (
     <div className={styles.info}>
       <div>
+        <h5>
+          <b>Informacije</b>
+        </h5>
         <p>
           <strong>Adresa:</strong> Tratinska 36, Zagreb, Hrvatska
         </p>
