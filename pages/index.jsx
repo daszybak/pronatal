@@ -20,9 +20,7 @@ export default function Home() {
         <Hero>
           <Content />
         </Hero>
-        <SectionMainTitle>
-          Najveći ginekološki stručnjaci u Hrvatskoj
-        </SectionMainTitle>
+        <SectionMainTitle>Naši priznati stručnjaci</SectionMainTitle>
         <Section title={'Prof. dr. sc. Marina Ivanišević'}>
           <Person
             src="/images/profesori/marina.jpg"
