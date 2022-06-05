@@ -1,0 +1,44 @@
+.person {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'a' 'b';
+    align-items: start;
+    justify-items: start !important;
+  }
+
+  .image {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+
+    @media screen and (max-width: 1000px) {
+      grid-area: a;
+      justify-self: start !important;
+    }
+
+    @media screen and (max-width: 450px) {
+      width: 300px;
+      grid-area: a;
+      justify-self: start;
+    }
+
+    @media screen and (max-width: 350px) {
+      width: 280px;
+      grid-area: a;
+      justify-self: start;
+    }
+  }
+
+  .text {
+    @media screen and (max-width: 750px) {
+      grid-area: b;
+      justify-self: start;
+    }
+  }
+}

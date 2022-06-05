@@ -29,4 +29,12 @@
     height: calc(100% - 100px);
     margin-top: 10rem;
   }
+
+  h3 {
+    margin-bottom: 2rem;
+
+    @media screen and (max-width: 1000px) {
+      text-align: left !important;
+    }
+  }
 }

@@ -5,6 +5,7 @@ import Hero from '../containers/hero/hero';
 import Footbar from '../containers/footbar/footbar';
 import Section from '../containers/section/section';
 import SectionMainTitle from '../components/sectionMainTitle/sectionMainTitle';
+import Person from '../components/person/person';
 
 export default function Home() {
   return (
@@ -19,10 +20,22 @@ export default function Home() {
         <Hero>
           <Content />
         </Hero>
-        <SectionMainTitle
-          title={'Najveći hrvatski stručnjaci u području ginekologije'}
-        />
-        <Section></Section>
+        <SectionMainTitle>
+          Najveći ginekološki stručnjaci u Hrvatskoj
+        </SectionMainTitle>
+        <Section title={'Prof. dr. sc. Marina Ivanišević'}>
+          <Person
+            src="/images/profesori/marina.jpg"
+            alt={'Prof. dr. sc. Marina Ivanišević'}
+          />
+        </Section>
+        <Section title={'Prof. dr. sc. Josip Đelmiš'} right>
+          <Person
+            src="/images/profesori/josip.jpeg"
+            alt={'Prof. dr. sc. Josip Đelmiš'}
+            right
+          />
+        </Section>
         <Footbar />
       </Layout>
     </>

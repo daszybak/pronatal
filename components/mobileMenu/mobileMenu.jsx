@@ -16,8 +16,6 @@ const MobileMenu = ({location}) => {
   const {pathname} = useRouter();
 
   const displaySubmenu = (e) => {
-    console.log('showSubmenu');
-    console.log(e.currentTarget.id);
     if (e.currentTarget.id === 'submenu1' && !e.target.closest('a')) {
       setShowSubmenu1((showSubmenu) => !showSubmenu);
       console.log('show submenu', showSubmenu1);
@@ -28,7 +26,6 @@ const MobileMenu = ({location}) => {
     const tempBtn = e.target.closest('li').getBoundingClientRect();
     const center = (tempBtn.left + tempBtn.right) / 2;
     const bottom = tempBtn.bottom - 30;
-    console.log('tempBtn', tempBtn, 'center', center, 'bottom', bottom);
     setSubmenuInfo({bottom});
   };
 

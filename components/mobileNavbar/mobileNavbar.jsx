@@ -48,6 +48,7 @@ const MobileNavbar = () => {
               width="203"
               height="27"
               alt="ProNatal"
+              priority={true}
             />
           </a>
         </Link>
