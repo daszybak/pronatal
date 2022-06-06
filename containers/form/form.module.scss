@@ -20,6 +20,13 @@
       @media screen and (max-width: 600px) {
         width: 300px;
       }
+
+      @media screen and (max-width: 380px) {
+        width: 250px;
+      }
+      @media screen and (max-width: 340px) {
+        width: 200px;
+      }
     }
 
     button {
@@ -44,6 +51,10 @@
         }
 
         @media screen and (max-width: 380px) {
+          width: 250px;
+        }
+
+        @media screen and (max-width: 340px) {
           width: 200px;
         }
 

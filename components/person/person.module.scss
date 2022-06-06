@@ -18,6 +18,8 @@
     order: 1;
 
     @media screen and (max-width: 1250px) {
+      width: 250px;
+      height: 250px;
       order: 1 !important;
     }
   }
@@ -25,6 +27,7 @@
   .text {
     text-align: left;
     order: 2;
+    overflow-wrap: break-word;
 
     @media screen and (max-width: 1250px) {
       order: 12 !important;
