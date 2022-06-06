@@ -130,15 +130,14 @@ const MobileMenu = ({location}) => {
           />
         </li>
         <li key={'zanimljivosti'}>
-          <Link href="/cesta-pitanja">
+          <Link href="/zanimljivosti">
             <a
               onClick={closeMenu}
               style={{
                 color: 'var(--textColor)',
               }}
             >
-              <span>Česta</span>
-              <span> pitanja</span>{' '}
+              zanimljivosti
             </a>
           </Link>
         </li>

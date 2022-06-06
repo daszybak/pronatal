@@ -115,11 +115,8 @@ const Navbar = () => {
                 />
               </li>
               <li key={'zanimljivosti'}>
-                <Link href="/cesta-pitanja">
-                  <a>
-                    <span>Česta</span>
-                    <span> pitanja</span>{' '}
-                  </a>
+                <Link href="/zanimljivosti">
+                  <a>zanimljivosti</a>
                 </Link>
               </li>
               <li key={'kontakt'}>
