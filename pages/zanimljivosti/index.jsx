@@ -14,67 +14,69 @@ import {BiTimer} from 'react-icons/bi';
 export default function CestaPitanja() {
   return (
     <Layout>
-      <Section
-        title={
-          <SectionMainTitle align={'left'}>Zanimljivosti</SectionMainTitle>
-        }
-      >
-        <Accordion
+      <div style={{marginTop: '6rem'}}>
+        <Section
           title={
-            <h4>
-              <GiScalpel />
-              &nbsp; Carski rez
-            </h4>
+            <SectionMainTitle align={'left'}>Zanimljivosti</SectionMainTitle>
           }
-          key={'Carski rez'}
         >
-          <CarskiRez />
-        </Accordion>
-        <Accordion
-          title={
-            <h4>
-              <WiStrongWind />
-              &nbsp; Disanje u porodu
-            </h4>
-          }
-          key={'Disanje u porodu'}
-        >
-          <DisanjeUPorodu />
-        </Accordion>
-        <Accordion
-          title={
-            <h4>
-              <GiBabyBottle />
-              &nbsp; Vještina dojenja
-            </h4>
-          }
-          key={'Vještina dojenja'}
-        >
-          <VjestinaDojenja />
-        </Accordion>
-        <Accordion
-          title={
-            <h4>
-              <GiLifeInTheBalance />
-              &nbsp; Kako prehrana, lijekovi i stil života utječu na dojenje
-            </h4>
-          }
-          key={'Kako prehrana, lijekovi i stil života utječu na dojenje'}
-        >
-          <KakoPrehrana />
-        </Accordion>
-        <Accordion
-          title={
-            <h4>
-              <BiTimer />
-              &nbsp; Kako prepoznati početak poroda
-            </h4>
-          }
-          key={'Kako prepoznati početak poroda'}
-        >
-          <KakoPrepoznati />
-        </Accordion>
-      </Section>
+          <Accordion
+            title={
+              <h4>
+                <GiScalpel />
+                &nbsp; Carski rez
+              </h4>
+            }
+            key={'Carski rez'}
+          >
+            <CarskiRez />
+          </Accordion>
+          <Accordion
+            title={
+              <h4>
+                <WiStrongWind />
+                &nbsp; Disanje u porodu
+              </h4>
+            }
+            key={'Disanje u porodu'}
+          >
+            <DisanjeUPorodu />
+          </Accordion>
+          <Accordion
+            title={
+              <h4>
+                <GiBabyBottle />
+                &nbsp; Vještina dojenja
+              </h4>
+            }
+            key={'Vještina dojenja'}
+          >
+            <VjestinaDojenja />
+          </Accordion>
+          <Accordion
+            title={
+              <h4>
+                <GiLifeInTheBalance />
+                &nbsp; Kako prehrana, lijekovi i stil života utječu na dojenje
+              </h4>
+            }
+            key={'Kako prehrana, lijekovi i stil života utječu na dojenje'}
+          >
+            <KakoPrehrana />
+          </Accordion>
+          <Accordion
+            title={
+              <h4>
+                <BiTimer />
+                &nbsp; Kako prepoznati početak poroda
+              </h4>
+            }
+            key={'Kako prepoznati početak poroda'}
+          >
+            <KakoPrepoznati />
+          </Accordion>
+        </Section>
+      </div>
     </Layout>
   );
 }

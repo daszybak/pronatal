@@ -1,5 +1,6 @@
 import Section from '../section/section';
 import Person from '../../components/person/person';
+import SectionMainTitle from '../../components/layout/secondaryLayout';
 
 const Team = () => {
   return (

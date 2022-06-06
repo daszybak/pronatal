@@ -1,9 +1,10 @@
 import styles from './section.module.scss';
 
-const Section = ({title, children, align}) => {
+const Section = ({title, children, align, mainTitle}) => {
   return (
     <div className={styles['outer-section']}>
       <div className={styles.section} style={{textAlign: align}}>
+        {mainTitle}
         {typeof title === 'object' ? (
           title
         ) : (
