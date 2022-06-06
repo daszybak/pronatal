@@ -10,11 +10,12 @@ import SectionMainTitle from '../../components/sectionMainTitle/sectionMainTitle
 import {GiScalpel, GiBabyBottle, GiLifeInTheBalance} from 'react-icons/gi';
 import {WiStrongWind} from 'react-icons/wi';
 import {BiTimer} from 'react-icons/bi';
+import styles from './zanimljivosti.module.scss';
 
 export default function CestaPitanja() {
   return (
     <Layout>
-      <div style={{marginTop: '6rem'}}>
+      <div className={styles.title}>
         <Section
           title={
             <SectionMainTitle align={'left'}>Zanimljivosti</SectionMainTitle>
