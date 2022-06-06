@@ -6,8 +6,8 @@
   .content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 'a b' 'c c';
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-areas: 'z z' 'a b' 'c c';
     align-items: start;
     justify-content: space-between;
     gap: 2rem;
@@ -19,8 +19,13 @@
       align-items: center;
     }
 
+    .title {
+      grid-area: z;
+    }
+
     .info {
       justify-self: start;
+      grid-area: a;
 
       @media screen and (max-width: 1000px) {
         align-self: flex-start;
@@ -28,6 +33,7 @@
     }
 
     .map {
+      grid-area: b;
       @media screen and (max-width: 1000px) {
         align-self: center;
       }

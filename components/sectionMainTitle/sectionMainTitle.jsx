@@ -1,6 +1,6 @@
 import styles from './sectionMainTitle.module.scss';
 
-const SectionMainTitle = ({children}) => {
+const SectionMainTitle = ({children, align}) => {
   const renderedChildren = children.split(' ').map((word, index) => {
     return (
       <span className={styles.highlight} key={index} style={{zIndex: index}}>
@@ -9,7 +9,9 @@ const SectionMainTitle = ({children}) => {
     );
   });
 
-  return <h2 className={styles.title}>{renderedChildren}</h2>;
+  return (
+    <h2 style={{textAlign: align, marginTop: '2rem'}}>{renderedChildren}</h2>
+  );
 };
 
 export default SectionMainTitle;

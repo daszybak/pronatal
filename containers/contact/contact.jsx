@@ -3,11 +3,13 @@ import styles from './contact.module.scss';
 // import {Wrapper, Status} from '@googlemaps/react-wrapper';
 import Map from '../../components/map/map';
 import Info from '../../components/info/info';
+import SectionMainTitle from '../../components/sectionMainTitle/sectionMainTitle';
 
 const Contact = () => {
   return (
     <div className={styles.kontakt}>
       <div className={styles.content}>
+        <SectionMainTitle className={styles.title}>Kontakt</SectionMainTitle>
         {/* <Wrapper apiKey={process.env.NEXT_PUBLIC_MAPS_API}>
           <Map
             position={{

@@ -6,11 +6,16 @@ import DisanjeUPorodu from '../../data/html-text/disanjeUPorodu';
 import VjestinaDojenja from '../../data/html-text/vjestinaDojenja';
 import KakoPrehrana from '../../data/html-text/kakoPrehrana';
 import KakoPrepoznati from '../../data/html-text/kakoPrepoznati';
+import SectionMainTitle from '../../components/sectionMainTitle/sectionMainTitle';
 
 export default function CestaPitanja() {
   return (
     <Layout>
-      <Section title={'Zanimljivosti'}>
+      <Section
+        title={
+          <SectionMainTitle align={'left'}>Zanimljivosti</SectionMainTitle>
+        }
+      >
         <Accordion title={'Carski rez'} key={'Carski rez'}>
           <CarskiRez />
         </Accordion>

@@ -38,8 +38,8 @@ const Form = () => {
   return (
     <div className={styles.form}>
       <>
-        <h2 style={{textTransform: 'none'}}>Naručite se</h2>
-        <h3 style={{textTransform: 'none'}}>Odmah ćemo vam se javiti</h3>
+        <h3>Naručite se</h3>
+        <h4 style={{marginBottom: '2rem'}}>Odmah ćemo vam se javiti</h4>
         <Formik
           initialValues={initialValues}
           validationSchema={contactFormSchema}
