@@ -4,7 +4,12 @@ const Section = ({title, children, align}) => {
   return (
     <div className={styles['outer-section']}>
       <div className={styles.section} style={{textAlign: align}}>
-        <h3>{!title ? `Title` : title}</h3>
+        {typeof title === 'object' ? (
+          title
+        ) : (
+          <h3>{!title ? `Title` : title}</h3>
+        )}
+
         {!children ? (
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, minima
