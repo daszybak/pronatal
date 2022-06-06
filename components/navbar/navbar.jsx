@@ -82,7 +82,7 @@ const Navbar = () => {
                     'Ginekologija',
                     'Opstetricija',
                     'Interna medicina',
-                    'Mamografija',
+                    'Ultrazvuk dojke',
                   ]}
                   submenuRoute={'/usluge'}
                 />

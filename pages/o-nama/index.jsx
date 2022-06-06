@@ -6,10 +6,18 @@ import Section from '../../containers/section/section';
 export default function ONama() {
   return (
     <SecondaryLayout>
+      <div style={{marginTop: '6rem'}}>
+        <Section
+          title={<SectionMainTitle>Naši priznati stručnjaci</SectionMainTitle>}
+        >
+          <Team />
+        </Section>
+      </div>
       <Section
-        title={<SectionMainTitle>Naši priznati stručnjaci</SectionMainTitle>}
+        title={<SectionMainTitle>Naša klinika</SectionMainTitle>}
+        align={'right'}
       >
-        <Team />
+        <div>Klinika</div>
       </Section>
     </SecondaryLayout>
   );

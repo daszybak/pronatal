@@ -88,7 +88,7 @@ const MobileMenu = ({location}) => {
               'Ginekologija',
               'Opstetricija',
               'Interna medicina',
-              'Mamografija',
+              'Ultrazvuk dojke',
             ]}
             submenuRoute={'/usluge'}
           />
