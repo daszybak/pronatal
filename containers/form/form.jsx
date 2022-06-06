@@ -5,6 +5,7 @@ import styles from './form.module.scss';
 import pronatal from 'axios';
 import {useState} from 'react';
 import axios from 'axios';
+import useResize from '../../hooks/useResize';
 
 const initialValues = {
   name: '',
@@ -15,6 +16,7 @@ const initialValues = {
 
 const Form = () => {
   const [submitted, setSubmitted] = useState(false);
+  const {width} = useResize();
 
   const handleOnFormSubmit = async (values, actions) => {
     try {
@@ -39,7 +41,9 @@ const Form = () => {
     <div className={styles.form}>
       <>
         <h3>Naručite se</h3>
-        <h4 style={{marginBottom: '2rem'}}>Odmah ćemo vam se javiti</h4>
+        <h4 style={{marginBottom: '2rem'}}>
+          Odmah ćemo vam{width < 381 ? <br /> : null} se javiti
+        </h4>
         <Formik
           initialValues={initialValues}
           validationSchema={contactFormSchema}
