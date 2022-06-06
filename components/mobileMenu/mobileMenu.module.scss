@@ -10,6 +10,7 @@
   z-index: 500;
   margin-bottom: 0;
   will-change: transform;
+  text-transform: uppercase;
 
   &.show {
     background-color: rgba($color: #fff, $alpha: 1);

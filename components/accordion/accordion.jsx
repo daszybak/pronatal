@@ -10,7 +10,7 @@ const Accordion = ({title, children}) => {
   return (
     <MUIAccordion className={styles.accordion}>
       <AccordionSummary expandIcon={<BiChevronDown />}>
-        <h4>{title}</h4>
+        {title}
       </AccordionSummary>
       <AccordionDetails className={styles.accordion}>
         {children}

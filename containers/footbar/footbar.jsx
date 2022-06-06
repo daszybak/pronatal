@@ -18,7 +18,6 @@ const Footbar = () => {
       <div id="footer" className={styles.anchor}></div>
       <SectionMainTitle>Upit</SectionMainTitle>
       <Form />
-
       {showButton && <ContactButton footbarContainer={footbarContainer} />}
       <CopyrightCard />
     </footer>

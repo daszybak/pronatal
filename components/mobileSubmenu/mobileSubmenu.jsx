@@ -31,7 +31,11 @@ const MobileSubmenu = ({
             .map((name) => name.slice(0, 1).toLowerCase() + name.slice(1))
             .join('-')}`}
         >
-          <a>{name}</a>
+          <a>
+            {name.split(' ').map((name, index) => {
+              return <span key={index}>{name}&nbsp;</span>;
+            })}
+          </a>
         </Link>
       </li>
     );

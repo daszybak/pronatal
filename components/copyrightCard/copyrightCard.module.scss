@@ -3,7 +3,8 @@
   background-color: var(--primary-900);
   color: var(--white);
   text-align: center;
-  margin-top: 2rem;
+  position: absolute;
+  bottom: 0;
 
   a {
     color: var(--white);

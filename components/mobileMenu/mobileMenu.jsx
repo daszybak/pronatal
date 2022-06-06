@@ -7,8 +7,7 @@ import MobileSubmenu from '../mobileSubmenu/mobileSubmenu';
 import {useRouter} from 'next/dist/client/router';
 
 const MobileMenu = ({location}) => {
-  const {showMenu, handleShowMenuOnClick, closeMenu} =
-    useContext(MobileMenuContext);
+  const {showMenu, closeMenu} = useContext(MobileMenuContext);
   const mobileMenuContainer = useRef();
   const [showSubmenu1, setShowSubmenu1] = useState(false);
   const [showSubmenu2, setShowSubmenu2] = useState(false);
@@ -18,7 +17,6 @@ const MobileMenu = ({location}) => {
   const displaySubmenu = (e) => {
     if (e.currentTarget.id === 'submenu1' && !e.target.closest('a')) {
       setShowSubmenu1((showSubmenu) => !showSubmenu);
-      console.log('show submenu', showSubmenu1);
     }
     if (e.currentTarget.id === 'submenu2' && !e.target.closest('a')) {
       setShowSubmenu2((showSubmenu) => !showSubmenu);
