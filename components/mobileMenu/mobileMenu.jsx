@@ -93,7 +93,7 @@ const MobileMenu = ({location}) => {
             submenuRoute={'/usluge'}
           />
         </li>
-        <li onClick={displaySubmenu} id={'submenu2'} key={'o nama'}>
+        <li id={'submenu2'} key={'o nama'} onClick={displaySubmenu}>
           <div>
             <div>
               <Link href="/o-nama">

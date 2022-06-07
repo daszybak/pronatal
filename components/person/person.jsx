@@ -2,7 +2,7 @@ import styles from './person.module.scss';
 import Image from 'next/image';
 import {useState} from 'react';
 
-const Person = ({src, alt, right, children}) => {
+const Person = ({src, alt, right, children, priority}) => {
   const [showMore, setShowMore] = useState(false);
 
   const renderedText = <>{showMore ? children : children?.substring(0, 250)}</>;
@@ -22,7 +22,8 @@ const Person = ({src, alt, right, children}) => {
           layout="fill"
           objectFit="cover"
           objectPosition="left top"
-          loading="lazy"
+          loading={priority ? 'eager' : 'lazy'}
+          priority={priority}
         />
       </div>
       <div style={{order: `${right ? '1' : '2'}`}} className={styles.text}>

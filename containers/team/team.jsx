@@ -9,6 +9,7 @@ const Team = () => {
         <Person
           src="/images/profesori/marina.jpg"
           alt={'Prof. dr. sc. Marina Ivanišević'}
+          priority
         />
       </Section>
       <Section title={'Prof. dr. sc. Josip Đelmiš'} align="right">

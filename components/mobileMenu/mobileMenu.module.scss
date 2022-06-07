@@ -44,6 +44,7 @@
       padding: 1rem 1.5rem;
       cursor: pointer;
       position: relative;
+
       div {
         display: flex;
         justify-content: space-between;
@@ -52,6 +53,9 @@
           color: var(--textColor);
           text-transform: uppercase;
           letter-spacing: 1px;
+          width: 100%;
+          flex-grow: 1;
+          flex-shrink: 0;
         }
       }
       .menu-btn {

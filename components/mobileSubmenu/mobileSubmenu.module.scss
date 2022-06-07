@@ -4,6 +4,19 @@
   overflow: hidden;
   scrollbar-width: none;
 
+  ul {
+    width: 100%;
+
+    li {
+      width: 100%;
+
+      a {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
   ::-webkit-scrollbar {
     display: none;
   }

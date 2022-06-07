@@ -1,6 +1,7 @@
-import {useEffect, useRef} from 'react';
+import {useEffect, useRef, useContext} from 'react';
 import Link from 'next/link';
 import styles from './mobileSubmenu.module.scss';
+import MobileMenuContext from '../../context/mobileMenuContext';
 
 const MobileSubmenu = ({
   showSubmenu,
@@ -9,6 +10,12 @@ const MobileSubmenu = ({
   submenuRoute,
 }) => {
   const submenuContainer = useRef(null);
+  const {closeMenu} = useContext(MobileMenuContext);
+
+  const handleOnLinkClick = (e) => {
+    e.stopPropagation();
+    closeMenu();
+  };
 
   useEffect(() => {
     if (!showSubmenu) {
@@ -31,7 +38,7 @@ const MobileSubmenu = ({
             .map((name) => name.slice(0, 1).toLowerCase() + name.slice(1))
             .join('-')}`}
         >
-          <a>
+          <a onClick={handleOnLinkClick}>
             {name.split(' ').map((name, index) => {
               return <span key={index}>{name}&nbsp;</span>;
             })}
@@ -43,7 +50,7 @@ const MobileSubmenu = ({
 
   return (
     <div className={styles.submenu} ref={submenuContainer}>
-      <ul>{renderedLinks}</ul>
+      <ul onClick={(e) => e.stopPropagation()}>{renderedLinks}</ul>
     </div>
   );
 };
