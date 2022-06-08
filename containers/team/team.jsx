@@ -10,7 +10,17 @@ const Team = () => {
           src="/images/profesori/marina.jpg"
           alt={'Prof. dr. sc. Marina Ivanišević'}
           priority
-        />
+        >
+          Rođena u Zagrebu 1957. Diplomirala je na Medicinskom fakultetu
+          Sveučilišta u Zagrebu 1981. Specijalizaciju radila od 1985. godine do
+          1989. godine iz ginekologije i opstetricije u Klinici za ženske
+          bolesti porođaje KBC-a Zagreb. Završila je 1990. godine doktorski
+          studij u ustanovama: New York Hospital, Cornell University Medical
+          College, Fulbright Fellowship i Medicinski fakultet Sveučilišta u
+          Zagrebu. Boravi na usavršavanjima na UCLA, Los Angeles. 2016. godine
+          postaje redovita profesorica u trajnom zvanju dodiplomske i
+          poslijediplomske nastave Medicinskog fakulteta Sveučilišta u Zagrebu.
+        </Person>
       </Section>
       <Section title={'Prof. dr. sc. Josip Đelmiš'} align="right">
         <Person
