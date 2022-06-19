@@ -12,7 +12,7 @@ export default function Home() {
       <Head>
         <meta
           name="description"
-          content="Poliklinika, ProNatal, ginekologija, opstetricija, porodništvo, privatna, ordinacija, Zagreb, centar, Hrvatska, natal, ginekološki, pregled, Marina, Ivanišević"
+          content="Poliklinika ProNatal je specijalizovana za preglede i terapije u ginekologiji i opstetricji."
         />
       </Head>
       <Layout>

@@ -1,0 +1,10 @@
+.anchor {
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    top: -120px;
+  
+    @media screen and (max-width: 1000px) {
+      top: -50px;
+    }
+  }

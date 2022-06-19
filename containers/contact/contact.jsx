@@ -10,7 +10,6 @@ const Contact = () => {
     <div className={styles.kontakt}>
       <div className={styles.content}>
         <SectionMainTitle className={styles.title}>Kontakt</SectionMainTitle>
-
         <div className={styles.info}>
           <Info />
         </div>

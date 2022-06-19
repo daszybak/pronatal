@@ -1,0 +1,37 @@
+{
+    "ginekologija": [
+        "Konzultacije - drugo mišljenje",
+        "Ginekološki pregled",
+        "Papa test",
+        "Cervikalni brisevi na aerobe, candidu albincas i glabratu, mycoplasmu, ureaplasmu, PCR test na chlamydiu, PCR test HPV visokog rizika",
+        "Ginekološki ultrazvuk vaginalnom sondom 2D i 3D",
+        "Ginekološki ultrazvuk s obojenim doplerom (color doppler)",
+        "Kolposkopija (pisani nalaz i digitalna pohrana slikovnog zapisa)",
+        "Frakcionirana kiretaža polipektomia",
+        "LLETZ (radiofrekvencijska metoda) biopsija",
+        "LLETZ (radiofrekvencijska metoda) odstranjivanje kondiloma",
+        "Manji rekonstruktivni kiruški zahvati (aumbulantna kirurgija)"
+    ],
+    "opstetricija": [
+        "Konzultacije - drugo mišljenje",
+        "Vođenje trudnoće do porođaja",
+        "Ultrazvučni pregled rane trudnoće-mini anomaly scan uz rani probir iz krvi trudnice",
+        "Ultrazvučni pregled trudnoće u 2 tromjesečju - anomaly scan",
+        "Usluge vađenja krvi za određene pretrage u trudnoći",
+        "Usluge neinvazivnog prenatalnog testiranja (nipt) u ponudi je cijela paleta najkvalitetnijih testova (qualified) od tvrtke biosave doo",
+        "Uzimanje papa razmaza i cervikalnih briseva",
+        "Color dopler protoka kroz majčine krvne žile, posteljicu i fetalne krvne žile",
+        "3d/4d ultrazvuk sa popratnim fotografijama i cd snimkom",
+        "Posebno praćenje trudnoća u trudnica sa kroničnim bolestima ( autoimunim, trombofilijom, preegzistentnim dijabetesom, bolesti štitnjače, maligne bolesti)",
+        "Posebno praćenje trudnoća sa prethodnim neuspjelim trudnoćama ( habitualni pobačaji, prijevremeni porođaj, insuficijencija vrata maternice)",
+        "Kardiotokografija",
+        "Ponuda konzultacija sa specijalistom interne medicine",
+        "Ponuda rehabilitacije nakon porođaja u suradnoj ustanovi"
+    ],
+    "interna medicina": [
+        "Konzultacije-drugo mišljenje",
+        "Ekspertni pregled endokrinologa kao i propisivanje adekvatnih prtraga i terapije",
+        "Licencirano davanje liječničkih potvrda un svrhu izdavanja viza za određene zemlje",
+        "Radiolog"
+    ]
+}

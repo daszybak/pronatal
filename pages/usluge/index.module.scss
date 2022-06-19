@@ -1,0 +1,12 @@
+.margin {
+    margin-top: 12rem;
+  
+    @media screen and (max-width: 1000px) {
+      margin-top: 8rem;
+    }
+  
+    @media screen and (max-width: 470px) {
+      margin-top: 6rem;
+    }
+  }
+  

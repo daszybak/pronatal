@@ -1,9 +1,11 @@
+import Anchor from '../../components/anchor/anchor';
 import styles from './section.module.scss';
 
-const Section = ({title, children, align, mainTitle}) => {
+const Section = ({title, children, align, mainTitle, id}) => {
   return (
     <div className={styles['outer-section']}>
       <div className={styles.section} style={{textAlign: align}}>
+      <Anchor id={id}/>
         {mainTitle}
         {typeof title === 'object' ? (
           title
