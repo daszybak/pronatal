@@ -12,7 +12,7 @@ export default function Home() {
       <Head>
         <meta
           name="description"
-          content="Poliklinika ProNatal je specijalizovana za preglede i terapije u ginekologiji i opstetricji."
+          content="Poliklinika ProNatal je specijalizirana za preglede i terapije u ginekologiji i opstetricji."
         />
       </Head>
       <Layout>
