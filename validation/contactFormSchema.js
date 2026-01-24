@@ -10,6 +10,10 @@ const contactFormSchema = yup.object().shape({
     .required('Broj telefona je obavezan'),
   subject: yup.string().required('Naslov je obavezan'),
   message: yup.string().required('Poruka je obavezna'),
+  consent: yup
+    .boolean()
+    .oneOf([true], 'Morate pristati na obradu osobnih podataka')
+    .required('Morate pristati na obradu osobnih podataka'),
 });
 
 export default contactFormSchema;

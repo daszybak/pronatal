@@ -72,3 +72,41 @@
     }
   }
 }
+
+.consent {
+  margin-top: 0.5rem;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--grey-600);
+
+  a {
+    color: var(--primary-700);
+    text-decoration: underline;
+
+    &:hover {
+      color: var(--primary-900);
+    }
+  }
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  margin-top: 2px;
+  cursor: pointer;
+  accent-color: var(--primary-600);
+}
+
+.error {
+  color: var(--red-dark);
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}

@@ -135,7 +135,7 @@ const MobileMenu = ({location}) => {
                 color: 'var(--textColor)',
               }}
             >
-              zanimljivosti
+              Zanimljivosti
             </a>
           </Link>
         </li>

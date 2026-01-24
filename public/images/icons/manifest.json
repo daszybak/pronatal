@@ -1,6 +1,7 @@
 {
-  "short_name": "Nextjs App",
-  "name": "Create Nextjs App Sample",
+  "short_name": "ProNatal",
+  "name": "Poliklinika ProNatal - Ginekologija i Opstetricija Zagreb",
+  "description": "Specijalizirana poliklinika za ginekologiju, opstetriciju i internu medicinu u Zagrebu",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +19,8 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#89cff0",
   "background_color": "#ffffff"
 }
