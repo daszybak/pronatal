@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Section from '../../containers/section/section'
 import SectionMainTitle from '../../components/sectionMainTitle/sectionMainTitle'
 import SecondaryLayout from '../../components/layout/secondaryLayout';
@@ -9,7 +10,16 @@ import styles from './index.module.scss';
 
 export default function Usluge() {
   return (
-    <SecondaryLayout>
+    <>
+      <Head>
+        <title>Usluge | Poliklinika ProNatal Zagreb</title>
+        <meta
+          name="description"
+          content="Ginekološke usluge Poliklinike ProNatal Zagreb - ginekologija, opstetricija, vođenje trudnoće, ultrazvuk, interna medicina. Cjelovita zdravstvena skrb za žene."
+        />
+        <link rel="canonical" href="https://www.pronatal.hr/usluge" />
+      </Head>
+      <SecondaryLayout>
       <div className={styles.margin}>
         <SectionMainTitle align={'center'}>Usluge</SectionMainTitle>
         <Section id={'ginekologija'}  title={<SectionMainTitle>Ginekologija</SectionMainTitle>}><List items={usluge.ginekologija}/></Section>
@@ -20,6 +30,7 @@ export default function Usluge() {
           <p style={{marginTop: '1rem'}}>Za više informacija i zakazivanje termina, molimo kontaktirajte nas.</p>
         </Section>
       </div>
-    </SecondaryLayout>
+      </SecondaryLayout>
+    </>
   );
 }

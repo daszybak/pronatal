@@ -4,8 +4,35 @@
   color: var(--white);
   text-align: center;
   margin-top: 2rem;
+  padding: 1.5rem 1rem;
 
   a {
     color: var(--white);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
   }
+}
+
+.links {
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+
+  a {
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+.separator {
+  margin: 0 0.5rem;
+  opacity: 0.5;
+}
+
+.copyright {
+  font-size: 0.85rem;
+  opacity: 0.9;
 }

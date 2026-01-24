@@ -6,12 +6,14 @@ import pronatal from 'axios';
 import {useState} from 'react';
 import axios from 'axios';
 import useResize from '../../hooks/useResize';
+import Link from 'next/link';
 
 const initialValues = {
   name: '',
   phone: '',
   subject: '',
   message: '',
+  consent: false,
 };
 
 const Form = () => {
@@ -79,6 +81,30 @@ const Form = () => {
             <Input text="Telefon*" name="phone" />
             <Input text="Naslov*" name="subject" />
             <Input text="Poruka*" name="message" />
+            <Field name="consent">
+              {({field, meta}) => (
+                <div className={styles.consent}>
+                  <label className={styles.checkboxLabel}>
+                    <input
+                      type="checkbox"
+                      {...field}
+                      checked={field.value}
+                      className={styles.checkbox}
+                    />
+                    <span>
+                      Pristajem na obradu osobnih podataka u skladu s{' '}
+                      <Link href="/privatnost">
+                        <a target="_blank">Izjavom o privatnosti</a>
+                      </Link>
+                      *
+                    </span>
+                  </label>
+                  {meta.touched && meta.error && (
+                    <div className={styles.error}>{meta.error}</div>
+                  )}
+                </div>
+              )}
+            </Field>
             <Field>
               {({field, form, meta}) => (
                 <button

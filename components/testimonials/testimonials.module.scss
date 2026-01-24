@@ -1,0 +1,138 @@
+.container {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  color: var(--primary-900);
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.stars {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.star {
+  color: #fbbf24;
+  font-size: 1.25rem;
+}
+
+.score {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--grey-700);
+}
+
+.googleLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-700);
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--primary-300);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: var(--primary-100);
+    border-color: var(--primary-500);
+  }
+}
+
+.testimonialGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  @media screen and (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: var(--shadow-2);
+  }
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--primary-200);
+  color: var(--primary-800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.name {
+  font-weight: 600;
+  color: var(--grey-800);
+}
+
+.cardStars {
+  display: flex;
+  gap: 0.125rem;
+}
+
+.starSmall {
+  color: #fbbf24;
+  font-size: 0.875rem;
+}
+
+.text {
+  color: var(--grey-600);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.date {
+  color: var(--grey-400);
+  font-size: 0.8rem;
+}

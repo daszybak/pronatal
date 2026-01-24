@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Section from '../../containers/section/section';
 import Layout from '../../components/layout/secondaryLayout';
 import Accordion from '../../components/accordion/accordion';
@@ -14,7 +15,16 @@ import styles from './zanimljivosti.module.scss';
 
 export default function CestaPitanja() {
   return (
-    <Layout>
+    <>
+      <Head>
+        <title>Zanimljivosti | Poliklinika ProNatal Zagreb</title>
+        <meta
+          name="description"
+          content="Korisne informacije o trudnoći i porodu - carski rez, disanje u porodu, dojenje, prehrana i prepoznavanje početka poroda. Stručni savjeti Poliklinike ProNatal."
+        />
+        <link rel="canonical" href="https://www.pronatal.hr/zanimljivosti" />
+      </Head>
+      <Layout>
       <div className={styles.title}>
         <Section
           title={
@@ -78,6 +88,7 @@ export default function CestaPitanja() {
           </Accordion>
         </Section>
       </div>
-    </Layout>
+      </Layout>
+    </>
   );
 }
