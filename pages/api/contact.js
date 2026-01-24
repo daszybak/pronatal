@@ -1,6 +1,8 @@
 export default function handler(req, res) {
   console.log('req.body:', req.body);
 
+  const {name, phone, subject, message} = req.body;
+
   const nodemailer = require('nodemailer');
   const transporter = nodemailer.createTransport({
     service: 'hotmail',
@@ -13,7 +15,7 @@ export default function handler(req, res) {
   const mailOptions = {
     from: 'kdjelmis@hotmail.com',
     to: 'pronatal@pronatal.hr',
-    subject,
+    subject: subject,
     text: `
     Ime i prezime: ${name}
     Telefon: ${phone}

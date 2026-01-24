@@ -15,7 +15,10 @@ export default function Usluge() {
         <Section id={'ginekologija'}  title={<SectionMainTitle>Ginekologija</SectionMainTitle>}><List items={usluge.ginekologija}/></Section>
         <Section id={'opstetricija'}   title={<SectionMainTitle>Opstetricija</SectionMainTitle>}><List items={usluge.opstetricija}/></Section>
         <Section id={'interna-medicina'}   title={<SectionMainTitle>Interna medicina</SectionMainTitle>}><List items={usluge['interna medicina']}/></Section>
-        <Section id={'ultrazvuk-dojke'}   title={<SectionMainTitle>Ultrazvuk dojke</SectionMainTitle>}> </Section>
+        <Section id={'ultrazvuk-dojke'}   title={<SectionMainTitle>Ultrazvuk dojke</SectionMainTitle>}>
+          <p>Ultrazvučni pregled dojki je neinvazivna dijagnostička metoda koja omogućuje rano otkrivanje promjena u tkivu dojke. Preporučuje se kao dio redovitog pregleda za žene svih dobnih skupina, posebno kao dopuna mamografiji.</p>
+          <p style={{marginTop: '1rem'}}>Za više informacija i zakazivanje termina, molimo kontaktirajte nas.</p>
+        </Section>
       </div>
     </SecondaryLayout>
   );
