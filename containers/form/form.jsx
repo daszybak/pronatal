@@ -2,9 +2,8 @@ import contactFormSchema from '../../validation/contactFormSchema';
 import {Formik, Form as FForm, Field} from 'formik';
 import Input from '../../components/input/input';
 import styles from './form.module.scss';
-import pronatal from 'axios';
-import {useState} from 'react';
 import axios from 'axios';
+import {useState} from 'react';
 import useResize from '../../hooks/useResize';
 import Link from 'next/link';
 
@@ -22,7 +21,7 @@ const Form = () => {
 
   const handleOnFormSubmit = async (values, actions) => {
     try {
-      const response = await pronatal.post('/api/contact', values, {
+      const response = await axios.post('/api/contact', values, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -32,10 +31,10 @@ const Form = () => {
         actions.resetForm();
         setSubmitted(true);
       } else {
-        throw new Error('Nešto je pošlo ka krivu, pokušajte ponovo.');
+        throw new Error('Nešto je pošlo po krivu, pokušajte ponovo.');
       }
     } catch (error) {
-      alert('Nešto je pošlo ka krivu, pokušajte ponovo.');
+      alert('Nešto je pošlo po krivu, pokušajte ponovo.');
     }
   };
 
@@ -94,7 +93,9 @@ const Form = () => {
                     <span>
                       Pristajem na obradu osobnih podataka u skladu s{' '}
                       <Link href="/privatnost">
-                        <a target="_blank">Izjavom o privatnosti</a>
+                        <a target="_blank" rel="noopener noreferrer">
+                          Izjavom o privatnosti
+                        </a>
                       </Link>
                       *
                     </span>
